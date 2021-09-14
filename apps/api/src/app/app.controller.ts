@@ -11,13 +11,13 @@ export class AppController {
     return this.appService.getData();
   }
 
-  @Get()
+  @Get('games')
   getAllGames() {
     return this.appService.getAllGames();
   }
 
-  @Get()
-  getGame(id: string) {
+  @Get('games/:id')
+  game(id: string) {
     return this.appService.getGame(id);
   }
 }
