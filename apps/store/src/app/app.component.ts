@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { getAllGames } from '../fake-api';
+import { getAllGames } from './fake-api';
 
 @Component({
   selector: 'bg-hoard-root',
