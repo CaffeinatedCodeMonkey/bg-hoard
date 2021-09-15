@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { Game } from '@bg-hoard/util-interface';
-
 @Injectable()
 export class AppService {
   getData(): { message: string } {
