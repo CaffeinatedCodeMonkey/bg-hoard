@@ -167,6 +167,19 @@
             "jestConfig": "apps/store/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "deploy": {
+          "executor": "@nrwl/workspace:run-commands",
+          "outputs": [],
+          "options": {
+            "command": "yarn surge dist/apps/store https://travis-jones.surge.sh --token $SURGE_TOKEN"
+          },
+          "dependsOn": [
+            {
+              "target": "build",
+              "projects": "self"
+            }
+          ]
         }
       }
     },
